@@ -1,0 +1,128 @@
+
+<!-- Barra de navegación principal -->
+<nav class="navbar bg-gray-800 px-4 md:px-8">
+
+  <!-- Sección izquierda del navbar -->
+  <div class="navbar-start">
+
+    <!-- Menú desplegable para pantallas pequeñas -->
+    <div class="dropdown">
+
+      <!-- Botón hamburguesa (visible solo en móviles) -->
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white">
+        <!-- Icono de menú -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M4 18q-.425 0-.712-.288T3 17t.288-.712T4 16h16q.425 0 .713.288T21 17t-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12t.288-.712T4 11h16q.425 0 .713.288T21 12t-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7t.288-.712T4 6h16q.425 0 .713.288T21 7t-.288.713T20 8z" />
+        </svg>
+      </div>
+
+      <!-- Contenido del menú desplegable -->
+      <ul tabindex="0"
+        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gray-800 rounded-box w-52 text-white">
+        <!-- Enlaces de navegación -->
+        <li><a routerLink="/home">Inicio</a></li>
+        <li><a routerLink="/proyectos">Proyectos</a></li>
+        <li><a routerLink="/certificaciones">Certificaciones</a></li>
+        <li><a routerLink="/skills">Skills</a></li>
+      </ul>
+    </div>
+
+    <!-- Logo + título -->
+    <div class="flex items-center gap-2">
+
+      <!-- Icono de código -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+        class="bi bi-code-slash text-primary" viewBox="0 0 16 16">
+        <path
+          d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"
+          stroke="currentColor" stroke-width="0.6" />
+      </svg>
+
+      <!-- Nombre o título del sitio -->
+      <span class="text-xl md:text-2xl font-extrabold text-white whitespace-nowrap">
+        Software Developer
+      </span>
+    </div>
+  </div>
+
+  <!-- Menú central (visible solo en pantallas grandes) -->
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1 gap-2">
+
+      <!-- Links principales -->
+      <li>
+        <a routerLink="/home" class="btn btn-ghost text-white font-bold text-base">
+          Inicio
+        </a>
+      </li>
+
+      <!-- routerLinkActive aplica estilo cuando la ruta está activa -->
+      <li>
+        <a routerLink="/proyectos" routerLinkActive="bg-accent" class="btn btn-ghost text-white font-bold text-base">
+          Proyectos
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/certificaciones" routerLinkActive="bg-accent"
+          class="btn btn-ghost text-white font-bold text-base">
+          Certificaciones
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/skills" routerLinkActive="bg-accent" class="btn btn-ghost text-white font-bold text-base">
+          Skills
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <!-- Sección derecha (vacía por ahora, útil para botones futuros como login) -->
+  <div class="navbar-end">
+  </div>
+
+</nav>
+
+
+
+
+<!-- <nav class="bg-gray-800">
+    <div class="flex justify-between items-center p-4 max-w-screen-xl mx-auto">
+      <div class="w-1/4 flex items-center justify-stretch p-2 gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+          class="bi bi-code-slash text-primary" viewBox="0 0 16 16">
+          <path
+            d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"
+            stroke="currentColor" stroke-width="0.6" paint-order="stroke fill" />
+        </svg>
+
+        <span class="text-2xl font-extrabold text-white">Software Developer</span>
+      </div>
+
+      <div class="w-2/5 flex justify-evenly">
+        <button class="btn btn-ghost font-bold text-base">
+          <a routerLink="/home" class="text-white">
+            Inicio
+          </a>
+        </button>
+        <button class="btn btn-ghost font-bold text-base" routerLinkActive="bg-accent">
+          <a routerLink="/proyectos" class="text-white">
+            Proyectos
+          </a>
+        </button>
+        <button class="btn btn-ghost font-bold text-base " routerLinkActive="bg-accent">
+          <a routerLink="/certificaciones" class="text-white">
+            Certificaciones
+          </a>
+        </button>
+        <button class="btn btn-ghost font-bold text-base" routerLinkActive="bg-accent">
+          <a routerLink="/skills" class="text-white">
+            Skills
+          </a>
+        </button>
+      </div>
+    </div>
+</nav> -->
