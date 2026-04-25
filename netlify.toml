@@ -1,3 +1,7 @@
 [build]
   command = "ng build"
   publish = "dist/portafolio/browser"
+
+[[plugins]]
+  package = "@netlify/angular-runtime"
+  enabled = false
