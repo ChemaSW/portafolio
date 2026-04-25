@@ -12,7 +12,6 @@ import { SkillsComponent } from './components/skills-component/skills-component'
   selector: 'app-home-page',
   imports: [
     HeroComponent,
-    RouterOutlet,
     ExperienciaIndexComponent,
     ProyectosTitleComponent,
     CertificadoComponent,
